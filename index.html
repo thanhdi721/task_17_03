@@ -1257,8 +1257,21 @@
 
       .stats-card {
         padding: 2rem 1.17375rem;
-        width: 173px;
-        height: 140px;
+        width: 90%;
+      }
+
+      .stats-row-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .stats-card-container {
+        padding: 0;
+        display: flex;
+        gap: 17px !important;
+        justify-content: center;
+        align-items: center;
       }
 
       .partners-container {
@@ -1386,7 +1399,29 @@
 
       .services-section-mobile {
         display: block;
-        /* Display the swiper version on mobile */
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .services-slider {
+        width: 100%;
+      }
+
+
+      .services-slide {
+        display: flex;
+        justify-content: center;
+        /* hoặc flex: 1; */
+      }
+
+      .service-text {
+        overflow: hidden;
+        max-height: 50px;
+
+      }
+
+      .card-services {
+        width: 95%;
       }
 
       .content-blog {
@@ -1490,30 +1525,32 @@
     <h2 class="section-title-section-2" data-aos="fade-up">
       Learn How to Quickly Generate
     </h2>
+    <div class="stats-row-container">
 
-    <div class="row stats-row g-4" data-aos="fade-up">
-      <div class="col-6 col-md-3">
-        <div class="stats-card blue">
-          <div class="stats-number">400+</div>
-          <div class="stats-text">Worldwide Clients</div>
+      <div class="row stats-row gx-3 gy-3" data-aos="fade-up">
+        <div class="col-6 col-md-3 stats-card-container">
+          <div class="stats-card blue">
+            <div class="stats-number">400+</div>
+            <div class="stats-text">Worldwide Clients</div>
+          </div>
         </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="stats-card pink">
-          <div class="stats-number">2 M+</div>
-          <div class="stats-text">Professional Staffs</div>
+        <div class="col-6 col-md-3 stats-card-container">
+          <div class="stats-card pink">
+            <div class="stats-number">2 M+</div>
+            <div class="stats-text">Professional Staffs</div>
+          </div>
         </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="stats-card green">
-          <div class="stats-number">16 k+</div>
-          <div class="stats-text">Project worldwide</div>
+        <div class="col-6 col-md-3 stats-card-container">
+          <div class="stats-card green">
+            <div class="stats-number">16 k+</div>
+            <div class="stats-text">Project worldwide</div>
+          </div>
         </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="stats-card yellow">
-          <div class="stats-number">95 %</div>
-          <div class="stats-text">Star Rated Reviews</div>
+        <div class="col-6 col-md-3 stats-card-container">
+          <div class="stats-card yellow">
+            <div class="stats-number">95 %</div>
+            <div class="stats-text">Star Rated Reviews</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1776,14 +1813,13 @@
 
     <!-- Services Section Swiper for Mobile -->
     <div class="services-section-mobile swiper d-lg-none">
-      <div class="card-services heading-card">
-        <span class="section-title-provider text-center">
-          Provide High Quality Data-Driven Service for IT Industry
-        </span>
-      </div>
-      <div class="swiper-wrapper">
+      <span class="section-title-provider text-center d-flex justify-content-center p-4">
+        Provide High Quality Data-Driven Service for IT Industry
+      </span>
+
+      <div class="swiper-wrapper services-slider">
         <!-- Repeat this block for each service -->
-        <div class="swiper-slide">
+        <div class="swiper-slide  service-slide d-flex justify-content-center align-items-center">
           <div class="card-services service-card pink">
             <div class="service-icon pink">
               <img src="./image/icon-services-1.svg" alt="Service 01" />
@@ -1799,9 +1835,9 @@
             </a>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="card-services service-card pink">
-            <div class="service-icon pink">
+        <div class="swiper-slide service-slide d-flex justify-content-center align-items-center">
+          <div class="card-services service-card green">
+            <div class="service-icon green">
               <img src="./image/icon-services-2.svg" alt="Service 02" />
             </div>
             <h3 class="service-title">Service 02</h3>
@@ -1815,9 +1851,9 @@
             </a>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="card-services service-card pink">
-            <div class="service-icon pink">
+        <div class="swiper-slide service-slide d-flex justify-content-center align-items-center">
+          <div class="card-services service-card green">
+            <div class="service-icon green">
               <img src="./image/icon-services-3.svg" alt="Service 03" />
             </div>
             <h3 class="service-title">Service 03</h3>
@@ -1831,9 +1867,9 @@
             </a>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="card-services service-card pink">
-            <div class="service-icon pink">
+        <div class="swiper-slide service-slide d-flex justify-content-center align-items-center">
+          <div class="card-services service-card blue">
+            <div class="service-icon blue">
               <img src="./image/icon-services-4.svg" alt="Service 04" />
             </div>
             <h3 class="service-title">Service 04</h3>
@@ -1848,7 +1884,26 @@
           </div>
 
         </div>
+        <div class="swiper-slide service-slide d-flex justify-content-center align-items-center">
+          <div class="card-services service-card pink">
+            <div class="service-icon green">
+              <img src="./image/icon-services-2.svg" alt="Service 04" />
+            </div>
+            <h3 class="service-title">Service 05</h3>
+            <p class="service-text">
+              Eam Animal Cons Incorupte. De Serun Et Princip Deos. Virtut De
+              Eripiut Est An. An Quo
+            </p>
+            <a href="#" class="read-more">
+              READ MORE
+              <span class="arrow">→</span>
+            </a>
+          </div>
 
+        </div>
+        
+
+        </div>
       </div>
     </div>
 
@@ -2436,8 +2491,10 @@
     });
 
     var swiperMobileServices = new Swiper(".services-section-mobile", {
-      slidesPerView: 1,
-      spaceBetween: 10,
+      slidesPerView: 1.6, // Show 3 slides per view
+      spaceBetween: 20, // Space between slides
+      freeMode: true, // Enable free mode
+      centeredSlides:true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -2449,11 +2506,16 @@
       },
       breakpoints: {
         640: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 20,
         },
+        1024: {
+          slidesPerView: 1.6,
+          spaceBetween: 20,
+        }
       }
     });
+
 
     AOS.init({
       duration: 1000,
